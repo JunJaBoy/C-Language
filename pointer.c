@@ -119,3 +119,53 @@
 //	printf("arr[2]	:	%d,	ptr[2]	:	%d,	*(ptr+2)	:	%d\n", arr[2], ptr[2], *(ptr + 2));
 //	return 0;
 //}
+
+
+
+
+//#include <stdio.h>
+//
+//void SetName(char* pszName, int a_size);
+//int main() {
+//	char szName[5] = { 0 };
+//	SetName(szName, 5);
+//	printf("당신의 이름은 %s입니다.\n", szName);
+//	return 0;
+//}
+//void SetName(char* pszName, int a_size) {
+//	printf("이름을 입력하세요 : ");
+//	for (int i = 0; i < a_size; i++) {
+//		scanf("%s", pszName + i);
+//	}
+//}
+
+
+
+
+#include <stdio.h>
+void Input(char*);
+void Upper(char*);
+int main()
+{
+	char buffer[1025] = { 0 };
+	Input(buffer);
+	Upper(buffer);
+	printf("%s\n", buffer);
+	return 0;
+}
+void Input(char buffer[])
+{
+	scanf("%s", buffer);
+}
+void Upper(char buffer[])
+{
+	int i;
+	for (i = 0; i < buffer[i] == '\0'; i++) {
+		if (buffer[i] > 96 && buffer[i] < 123) {
+			buffer[i] -= 32;
+			printf("%c", buffer[i]);
+		}
+		else
+			printf("%c", buffer[i]);
+	}
+}
